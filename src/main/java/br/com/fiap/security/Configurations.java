@@ -32,6 +32,8 @@ public class Configurations {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and()
+                .cors()
                 .and().authorizeHttpRequests()
                 .requestMatchers(HttpMethod.POST, "/login")
                 .permitAll()

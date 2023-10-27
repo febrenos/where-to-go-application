@@ -21,7 +21,7 @@ import java.util.List;
 public class GptService {
 
     //TODO: Find a way to put this into a environment variable
-    private final OpenAiService service = new OpenAiService("", Duration.ofSeconds(60));
+    private final OpenAiService service = new OpenAiService("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", Duration.ofSeconds(60));
 
     public TripDto createOpenAiTrip(TripCreationDto tripCreationDto) {
         List<ChatMessage> messages = Arrays.asList(
